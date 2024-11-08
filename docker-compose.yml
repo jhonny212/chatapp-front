@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "3005:80"  # Mapea el puerto 80 del contenedor al puerto 3000 de la máquina host
